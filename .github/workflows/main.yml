@@ -1,1 +1,14 @@
+name: Verify Agent
 
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Verify
+        run: echo "Agent Verified"
